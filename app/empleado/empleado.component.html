@@ -1,0 +1,58 @@
+<div style="background-color: yellow">
+<H3>{{titulo_empleado}}</H3>
+</div>
+<div>
+	<!-- table border="1">
+		<tr>
+			<td>Nombre:</td>
+			<td>{{nombre}}</td>
+		</tr>
+		<tr>
+			<td>Edad:</td>
+			<td>{{edad}}</td>
+		</tr>
+		<tr>
+			<td>Codigo de Seguridad:</td>
+			<td>{{valor}}</td>
+		</tr>
+	</table>		
+	<hr>
+	valor del Array!!!{{profesion}} -->
+	<div *ngIf="trabajador_externo == true">
+		<button  (click)="cambiarExterno(false)"> Mostrar Empleado</button>
+		<ul>
+			<li>{{trabajadores[1].nombre}}</li>
+			<li>{{trabajadores[1].edad}}</li>
+			<li>{{trabajadores[1].cargo}}</li>
+			<li *ngIf ="trabajadores[1].contratado == true">Esta Contratado</li>
+			<li *ngIf ="trabajadores[1].contratado == false">NO Esta Cntratado</li>
+		</ul>
+	</div>
+	<div *ngIf="trabajador_externo == false">
+		<button (click)="cambiarExterno(true)"> Mostrar Trabajador</button>
+		<ul>
+			<li>{{empleado.nombre}}</li>
+			<li>{{empleado.edad}}</li>
+			<li>{{empleado.cargo}}</li>
+			<li *ngIf ="empleado.contratado == true">Esta Contratado</li>
+			<li *ngIf ="empleado.contratado == false">NO Esta Contratado</li>
+		</ul>
+	</div>
+</div>
+<hr>
+<h3>Listado de Empleados</h3>
+
+	<ul>
+		<li *ngFor="let workers of trabajadores; let i=index">
+			<strong>Empleado:{{i+1}}</strong>
+			<ul>
+				<li>{{workers.nombre}}</li>
+				<li>{{workers.edad}}</li>
+				<li>{{workers.cargo}}</li>
+				<li *ngIf ="empleado.contratado == true">Esta Contratado</li>
+				<li *ngIf ="empleado.contratado == false">NO Esta Contratado</li>
+			</ul>
+		</li>
+
+	</ul>
+	<hr>	

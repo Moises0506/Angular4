@@ -1,0 +1,22 @@
+
+.fondoAzul{
+
+    background: lightblue;
+}
+.fondoVerde{
+    background: lightgreen;
+}
+.errorPStyle{
+    background: red;
+    font-size: 30px;
+    font-style: italic;
+    color: white;
+
+}
+.errorH404{
+    background: blueviolet;
+    font-style: oblique;
+    color: antiquewhite;
+    text-align: center;
+    font-size: 30px;
+}

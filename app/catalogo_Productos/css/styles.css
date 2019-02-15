@@ -1,0 +1,9 @@
+.cambios{
+    background-color: rgb(211, 65, 20);
+    width: 300px;
+    height: 100px;
+    top: 10px;
+    padding: 20px;
+    color: azure;
+    background-image: url ("logo.png");
+}

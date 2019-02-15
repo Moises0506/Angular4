@@ -1,0 +1,35 @@
+<h3>Lista de CAtalogo de puestos</h3>
+<ul>
+	<li *ngFor ="let catp of catpuestos; let i=index">
+		<strong> Catalogo Puesto:{{i+1}}</strong>
+		<ul>
+			<li>{{catp.idPuesto}}</li>
+			<li>{{catp.cvePuesto}}</li>
+			<li>{{catp.descPuesto}}</li>
+			<li>{{catp.activo}}</li>
+		</ul>
+	</li>
+
+</ul>
+
+<table border="1" cellpadding="4px" cellspacing="0px">	
+		<thead >
+			<tr >
+				<th>ID</th>
+				<th>ID PUESTO</th>
+				<th>CLAVE PUESTO</th>
+				<th>DESCRIPTCION</th>
+				<th>ESTATUS</th>
+			</tr>
+		</thead>	
+		<tbody>
+			<tr *ngFor ="let catp of catpuestos; let i=index">
+				<td>{{i+1}}</td>
+				<td>{{catp.idPuesto}}</td>
+				<td>{{catp.cvePuesto}}</td>
+				<td>{{catp.descPuesto}}</td>
+				<td>{{catp.activo}}</td>
+			</tr>
+		</tbody>
+
+</table>

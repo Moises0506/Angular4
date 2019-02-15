@@ -1,0 +1,23 @@
+.stylesMate{
+    background-color: rgb(53, 78, 163);
+    color: azure;
+    text-align: center;
+    font-style: italic;
+    /*width: 300px;
+    height: 100px;
+    top: 10px;
+    padding: 20px;
+    
+    background-image: url ("logo.png"); */
+}
+
+.divMat{
+    background-color: rgb(215, 218, 205);
+
+}
+
+.divMatALign{
+    top: 10px;
+    padding: 20px;
+    
+}

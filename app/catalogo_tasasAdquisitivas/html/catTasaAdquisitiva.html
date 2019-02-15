@@ -1,0 +1,44 @@
+<br>
+<div>
+	<table border="1" cellpadding="4px" cellspacing="0px">
+		<thead [ngSwitch]="cambiaColor">
+			<tr *ngSwitchCase="'purple'" [ngStyle]="{'background':cambiaColor, 'color': 'white'}">
+				<th>ID</th>
+				<th>DESCRIPCION</th>
+				<th>VALOR</th>
+				<th>ESTATUS</th>				
+			</tr>
+		</thead>	
+		<tbody [ngSwitch]="cambiaColor">
+			<tr *ngFor="let catTasa of catTasas; let i=index" >
+				<td>{{i+1}}</td>
+				<td>{{catTasa.descTasa}}</td>
+				<td>{{catTasa.valorTasa}}</td>
+				<td>{{catTasa.estatus}}</td>
+			</tr>
+		</tbody>
+	</table>	
+</div>
+<hr>
+<div>	
+	<h3>Seleccion de color:</h3>
+	<button (click)="logColorSeleccionado()">Show Log</button>
+	<input type="text" [(ngModel)]="seleccion_color" name="texto1"><br><br>
+	<pre [style.border]="seleccion_color == 'red' ? '4px solid black' : '2px solid gray' "		 
+		 [ngClass]="{ fondoAzul: seleccion_color == 'blue',
+		 			  fondoVerde: seleccion_color == 'green'
+		 			}"
+	>
+	<strong>Color Seleccionado</strong> 
+	{{seleccion_color}}
+	</pre>
+	<div [ngStyle]="{'background':seleccion_color,
+				     'width':'200px',
+				     'height':'200px',
+				     'float':'right',
+				     'margin-right':'69%'
+					   }">		
+	</div>
+	<div style="clear:both;"></div>
+
+</div>
